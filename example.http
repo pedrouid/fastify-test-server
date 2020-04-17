@@ -1,0 +1,21 @@
+GET http://localhost:5040/hello
+
+###
+
+GET http://localhost:5040/config
+
+###
+
+POST http://localhost:5040/connect
+Content-Type: application/json
+
+{
+  "mnemonic": "rich awful vocal decade chaos horse cheese sadness just equip equip dismiss",
+  "network": "localhost"
+}
+
+###
+
+GET http://localhost:5040/balance/0x0000000000000000000000000000000000000000
+
+###

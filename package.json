@@ -1,0 +1,58 @@
+{
+  "name": "fastify-test-server",
+  "description": "Fastify Test Server",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrouid/fastify-test-server.git"
+  },
+  "author": "Pedro Gomes <github.com/pedrouid>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedrouid/fastify-test-server/issues"
+  },
+  "homepage": "https://github.com/pedrouid/fastify-test-server#readme",
+  "scripts": {
+    "clean:build": "rm -rf ./build",
+    "compile": "tsc -p tsconfig.json",
+    "build": "npm run clean:build && npm run compile",
+    "start": "npm run build && node ./build",
+    "lint": "eslint -c './.eslintrc' --fix './src/**/*.ts'",
+    "start:dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.6.4",
+    "dotenv": "^8.0.0",
+    "fastify": "^1.13.4",
+    "fastify-helmet": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@types/axios": "^0.14.0",
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.0",
+    "@types/ws": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.3"
+  }
+}
