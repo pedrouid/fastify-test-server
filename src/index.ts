@@ -25,7 +25,7 @@ app.get("/hello", (req, res) => {
 
 app.post("/webhook", async (req, res) => {
   try {
-    app.log.info(`TRIGGERED WEBHOOK`);
+    app.log.info(`req.body: ${JSON.stringify(req.body, null, 2)}`);
     res.status(200).send({ success: true });
   } catch (error) {
     app.log.error(error);
